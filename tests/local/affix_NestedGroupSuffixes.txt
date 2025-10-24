@@ -1,0 +1,54 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+>>===== DESCRIPTION =====>>
+Nested groups should both apply their suffixes even when the inner
+suffix matches the outer suffix. Previously, the outer suffix was
+incorrectly suppressed when the rendered text already ended with
+the same suffix string.
+
+https://github.com/typst/hayagriva/issues/411
+<<===== DESCRIPTION =====<<
+
+
+>>===== RESULT =====>>
+prefix.prefix.Text.anything-suffix.suffix.
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <id />
+    <title />
+  </info>
+  <citation>
+    <layout>
+      <group prefix="prefix." suffix="suffix.">
+        <group prefix="prefix." suffix="anything-suffix.">
+          <text value="Text." />
+        </group>
+      </group>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "id",
+        "title": "Title",
+        "type": "article"
+    }
+]
+<<===== INPUT =====<<
+
+
+>>===== VERSION =====>>
+1.0.2
+<<===== VERSION =====<<

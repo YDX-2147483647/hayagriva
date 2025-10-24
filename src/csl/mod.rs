@@ -2802,17 +2802,7 @@ impl<'a, T: EntryLike> Context<'a, T> {
             self.discard_elem(loc.0);
         } else {
             if let Some(suffix) = &affixes.suffix {
-                let do_suffix = if !self.writing.buf.is_empty() {
-                    !self.writing.buf.as_string_mut().ends_with(suffix.as_str())
-                } else if let Some(l) = self.writing.elem_stack.last_mut().last_text() {
-                    !l.text.ends_with(suffix)
-                } else {
-                    true
-                };
-
-                if do_suffix {
-                    self.push_str(suffix);
-                }
+                self.push_str(suffix);
             }
             self.commit_elem(loc.0, None, None);
         }
