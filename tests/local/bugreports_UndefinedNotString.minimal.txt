@@ -1,0 +1,55 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+This exercises text-case="title".  Test by Carles Pina.
+
+>>===== DESCRIPTION =====>>
+Expected:
+<div class="csl-bib-body"><div class="csl-entry"><b>n.d.</b></div></div>
+<<===== DESCRIPTION =====<<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body"><div class="csl-entry"><b>n.d</b>.</div></div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title/>
+    <id/>
+  </info>
+  <citation>
+    <layout>
+      <text value="(citation-number)"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout suffix=".">
+      <group font-weight="bold">
+        <text term="no date" form="short"/>
+    </group>
+    </layout>
+  </bibliography>
+</style>
+
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "container-title": "FOO BAR",
+        "id": "ITEM-1",
+        "type": "article-journal"
+    }
+]
+<<===== INPUT =====<<
+
+
+>>===== VERSION =====>>
+1.0
+<<===== VERSION =====<<
+

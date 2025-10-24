@@ -9,7 +9,6 @@ affix_TextNodeWithMacro
 bugreports_Abnt
 bugreports_ArabicLocale
 bugreports_AsaSpacing
-bugreports_AsmJournals
 bugreports_AuthorYear
 bugreports_BadCitationUpdate
 bugreports_BadDelimiterBeforeCollapse
@@ -26,7 +25,6 @@ bugreports_SortSecondaryKeyBibliography
 bugreports_StyleError001
 bugreports_TitleCase
 bugreports_UndefinedInName2
-bugreports_UndefinedNotString
 bugreports_UndefinedStr
 bugreports_UnisaHarvardInitialization
 bugreports_YearSuffixLingers
